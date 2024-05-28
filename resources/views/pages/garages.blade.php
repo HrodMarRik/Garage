@@ -1,5 +1,4 @@
-@include('../partiels/header')
-<body>
+@include('partiels.header')
 
 <table class="table table-hover">
     <thead>
@@ -29,6 +28,4 @@
     </tbody>
 </table>
 
-</body>
-</html>
-
+@include('partiels.footer')
