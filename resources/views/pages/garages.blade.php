@@ -1,6 +1,7 @@
+@include('../partiels/header')
 <body>
 
-<table class="table table-hover" style="text-align: center;">
+<table class="table table-hover">
     <thead>
         <tr>
             <th>ID</th>
