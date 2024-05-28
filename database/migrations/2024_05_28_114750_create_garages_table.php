@@ -18,7 +18,7 @@ return new class extends Migration
             $table->decimal('montant_charges', 8, 2);
             $table->decimal('prix_particulier', 8, 2);
             $table->decimal('prix_entreprise', 8, 2);
-            $table->decimal('remboursement_emprunt_moi', 8, 2);
+            $table->decimal('remboursement_emprunt_mois', 8, 2);
             $table->date('date_achat');
             $table->date('date_fin_remboursement_emprunt');
         });
