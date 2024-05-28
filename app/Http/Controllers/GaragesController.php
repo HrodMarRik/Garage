@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class GaragesController extends Controller
 {
-    // return view('garages');
-    return 'salut';
+    public function show() {
+        return view('garages');
+    }
 }

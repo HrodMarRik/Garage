@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\GaragesController;
+use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\Contra;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,7 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/garages', [GaragesController::class])->name('garages');
+    Route::get('/garages', [GaragesController::class, 'show'])->name('garages');
 
     Route::get('/clients', [ClientsController::class])->name('clients');
 
