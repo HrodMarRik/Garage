@@ -2,9 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Contrat;
 use App\Models\Client;
 use App\Models\Garage;
-use App\Models\Contrat;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ContratFactory extends Factory
@@ -17,7 +17,7 @@ class ContratFactory extends Factory
             'id_client' => Client::factory(),
             'id_garage' => Garage::factory(),
             'status' => $this->faker->randomElement(['active', 'inactive']),
-            'structure' => $this->faker->text(500),
+            'structure' => $this->faker->paragraph,
         ];
     }
 }
