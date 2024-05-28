@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GaragesController;
 use App\Http\Controllers\ClientsController;
-use App\Http\Controllers\Contra;
+use App\Http\Controllers\ContratsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
