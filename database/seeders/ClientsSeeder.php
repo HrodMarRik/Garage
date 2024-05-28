@@ -5,10 +5,10 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Client;
 
-class ClientSeeder extends Seeder
+class ClientsSeeder extends Seeder
 {
     public function run()
     {
-        Client::factory()->count(50)->create();
+        ClientFactory::factory()->count(50)->create();
     }
 }

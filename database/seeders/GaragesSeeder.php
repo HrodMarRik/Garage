@@ -5,10 +5,10 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Garage;
 
-class GarageSeeder extends Seeder
+class GaragesSeeder extends Seeder
 {
     public function run()
     {
-        Garage::factory()->count(20)->create();
+        GarageFactory::factory()->count(20)->create();
     }
 }
