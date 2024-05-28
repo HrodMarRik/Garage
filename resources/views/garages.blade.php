@@ -8,9 +8,35 @@
 </head>
 <body>
 
+<<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>adresse</th>
+            <th>Charges en €</th>
+            <th>Prix Particulier</th>
+            <th>Prix Entreprise</th>
+            <th>Remboursement/Mois</th>
+            <th>Date achat</th>
+            <th>Date fin Prêt</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach ($garages as $garage)
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            @endforeach
+        </tr>
+    </tbody>
+</table>
+
 </body>
 </html>
 
-@foreach ($garages as $garage)
-    {{ $garage }}
-@endforeach
