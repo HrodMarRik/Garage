@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\seeder;
+use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends seeder
+class DatabaseSeeder extends Seeder
 {
     public function run()
     {
