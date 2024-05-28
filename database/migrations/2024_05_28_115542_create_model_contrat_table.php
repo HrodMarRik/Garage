@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('model_contrat', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->structure();
+            $table->text('structure'); // Assuming 'structure' is a large text field.
         });
     }
 
