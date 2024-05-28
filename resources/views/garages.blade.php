@@ -1,5 +1,5 @@
 
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<<table class="table table-hover">
+<table class="table table-hover">
     <thead>
         <tr>
             <th>ID</th>
@@ -22,18 +22,18 @@
         </tr>
     </thead>
     <tbody>
+        @foreach ($garages as $garage)
         <tr>
-            @foreach ($garages as $garage)
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            @endforeach
+                <td>{{ $garage->id }}</td>
+                <td>{{ $garage->adresse }}</td>
+                <td>{{ $garage->montant_charges }}</td>
+                <td>{{ $garage->prix_particulier }}</td>
+                <td>{{ $garage->prix_entreprise }}</td>
+                <td>{{ $garage->remboursement_emprunt_mois }}</td>
+                <td>{{ $garage->date_achat }}</td>
+                <td>{{ $garage->date_fin_remboursement_emprunt }}</td>
         </tr>
+        @endforeach
     </tbody>
 </table>
 
