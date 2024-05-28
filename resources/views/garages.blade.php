@@ -9,12 +9,10 @@
 <body>
 
 <table class="table table-hover">
-<table>
     <thead>
         <tr>
             @foreach ($garages->first()->toArray() as $key => $value)
-                @if($key == 'created_at' || 'updated_at')
-                @else
+                @if ($key !== 'updated_at' && $key !== 'created_at')
                     <th>{{ $key }}</th>
                 @endif
             @endforeach
@@ -23,13 +21,16 @@
     <tbody>
         @foreach ($garages as $garage)
             <tr>
-                @foreach ($garage->toArray() as $value)
-                    <td>{{ $value }}</td>
+                @foreach ($garage->toArray() as $key => $value)
+                    @if ($key !== 'updated_at' && $key !== 'created_at')
+                        <td>{{ $value }}</td>
+                    @endif
                 @endforeach
             </tr>
         @endforeach
     </tbody>
 </table>
+
 
 
 </body>
