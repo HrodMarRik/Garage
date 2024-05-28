@@ -11,9 +11,10 @@
         <h1>Mon Super Site</h1>
         <nav>
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href=" {{ Route('dashboard') }} ">Dashboard</a></li>
+                <li><a href=" {{ Route('garage') }} ">Garages</a></li>
+                <li><a href=" {{ Route('client') }} ">Clients</a></li>
+                <li><a href=" {{ Route('contrat') }} ">Contrats</a></li>
             </ul>
         </nav>
     </header>

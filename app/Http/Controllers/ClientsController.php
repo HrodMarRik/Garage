@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ClientsController extends Controller
 {
-    public function show() {
+    public function show(): View {
         return view('pages.clients');
     }
 }
