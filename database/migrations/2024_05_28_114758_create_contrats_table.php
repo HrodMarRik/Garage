@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('contrats', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('id_client')->constrained('clients');
+            $table->foreignId('id_garage')->constrained('garages');
+            $table->status();
+            $table->structure();
         });
     }
 
