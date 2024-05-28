@@ -19,6 +19,8 @@
                         @if (Route::has("contrats"))
                             <a href=" {{ Route('contrats') }}">mes contrats</a>
                         @endif
+                    @else
+                        <p>pas de contenue</p>
                     @endif
                 </div>
             </div>
