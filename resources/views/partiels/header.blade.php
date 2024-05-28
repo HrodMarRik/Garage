@@ -6,3 +6,6 @@
     <title>mes Garages</title>
     <link rel="stylesheet" type="text/css" href="/testlaravel/resources/css/app.css">
 </head>
+<header>
+    <h1>titre</h1>
+</header>
