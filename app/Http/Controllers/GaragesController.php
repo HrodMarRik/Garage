@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 
 class GaragesController extends Controller
 {
-    public function show() {
-        return view('garages');
+    public function show(): View {
+        // aller chercher le dico garages
+        $garages = "en construction";
+        return view('garages', [$garages]);
     }
 }
