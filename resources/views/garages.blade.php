@@ -9,33 +9,28 @@
 <body>
 
 <table class="table table-hover">
+<table>
     <thead>
         <tr>
-            <th>ID</th>
-            <th>adresse</th>
-            <th>Charges en €</th>
-            <th>Prix Particulier</th>
-            <th>Prix Entreprise</th>
-            <th>Remboursement/Mois</th>
-            <th>Date achat</th>
-            <th>Date fin Prêt</th>
+            @foreach ($garages->first()->toArray() as $key => $value)
+                @if($key == 'created_at' || 'updated_at')
+                @else
+                    <th>{{ $key }}</th>
+                @endif
+            @endforeach
         </tr>
     </thead>
     <tbody>
         @foreach ($garages as $garage)
-        <tr>
-                <td>{{ $garage->id }}</td>
-                <td>{{ $garage->adresse }}</td>
-                <td>{{ $garage->montant_charges }}</td>
-                <td>{{ $garage->prix_particulier }}</td>
-                <td>{{ $garage->prix_entreprise }}</td>
-                <td>{{ $garage->remboursement_emprunt_mois }}</td>
-                <td>{{ $garage->date_achat }}</td>
-                <td>{{ $garage->date_fin_remboursement_emprunt }}</td>
-        </tr>
+            <tr>
+                @foreach ($garage->toArray() as $value)
+                    <td>{{ $value }}</td>
+                @endforeach
+            </tr>
         @endforeach
     </tbody>
 </table>
+
 
 </body>
 </html>
