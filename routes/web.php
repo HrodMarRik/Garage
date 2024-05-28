@@ -26,7 +26,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/garages', [moncontrolleur::class])->name('garages');
+    Route::get('/garages', [GaragesController::class])->name('garages');
+    Route::get('/clients', [ClientsController::class])->name('clients');
+    Route::get('/contrats', [ContratsController::class])->name('contrats');
 });
 
 require __DIR__.'/auth.php';
