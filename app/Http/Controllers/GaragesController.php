@@ -8,12 +8,11 @@ use App\Models\Garage;
 
 class GaragesController extends Controller
 {
-    public function show(Request $request): View {
+    public function show(): View {
         // aller chercher le dico garages
         $garages = Garage::all();
-        return view('garages', [
+        return view('pages.garages', [
             'garages' => $garages,
-            'request' => $request,
         ]);
     }
 }

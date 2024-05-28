@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class ContratsController extends Controller
 {
     public function show() {
-        return view('contrats');
+        return view('pages.contrats');
     }
 }
