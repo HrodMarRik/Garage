@@ -40,3 +40,8 @@
 </body>
 </html>
 
+@foreach($garages as $key=>$value)
+    @foreach($garage as $value)
+        {{ $value }}<br>
+    @endforeach
+@endforeach
