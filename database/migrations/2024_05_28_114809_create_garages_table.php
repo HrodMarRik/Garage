@@ -14,6 +14,13 @@ return new class extends Migration
         Schema::create('garages', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->adresse();
+            $table->montant_charges();
+            $table->prix_particulier();
+            $table->prix_entreprise();
+            $table->remboursement_emprunt_moi();
+            $table->date_achat();
+            $table->date_fin_remboursement_emprunt();
         });
     }
 
