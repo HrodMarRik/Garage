@@ -16,7 +16,7 @@ class ContratFactory extends Factory
         return [
             'id_client' => Client::factory(),
             'id_garage' => Garage::factory(),
-            'status' => $this->faker->randomElement(['active', 'inactive']),
+            'status' => $this->faker->randomElement(['active', 'inactive', 'delete', 'pause']),
             'structure' => $this->faker->paragraph,
         ];
     }
