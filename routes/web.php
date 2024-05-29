@@ -33,7 +33,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/clients', [ClientsController::class, 'show'])->name('clients');
 
+    Route::prefix('/clients')
     Route::get('/contrats', [ContratsController::class, 'show'])->name('contrats');
+    Route::get('/contrats-read', [ContratsController::class, 'read'])->name('contrats.read');
 });
 
 require __DIR__.'/auth.php';
