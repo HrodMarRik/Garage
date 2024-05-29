@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
         Route::delete('-delete', [ContratsController::class, 'delete'])->name('delete');
     });
 
-    Route::prefix('/Clients')->name('Clients.')->group(function() {
+    Route::prefix('/clients')->name('clients.')->group(function() {
         Route::get('/', [ClientsController::class, 'show'])->name('index');
         Route::get('-read', [ClientsController::class, 'read'])->name('read');
         Route::get('-edit', [ClientsController::class, 'edit'])->name('edit');
@@ -45,12 +45,12 @@ Route::middleware('auth')->group(function () {
         Route::delete('-delete', [ClientsController::class, 'delete'])->name('delete');
     });
 
-    Route::prefix('/contrats')->name('contrats.')->group(function() {
-        Route::get('/', [ContratsController::class, 'show'])->name('index');
-        Route::get('-read', [ContratsController::class, 'read'])->name('read');
-        Route::get('-edit', [ContratsController::class, 'edit'])->name('edit');
-        Route::post('-update', [ContratsController::class, 'update'])->name('update');
-        Route::delete('-delete', [ContratsController::class, 'delete'])->name('delete');
+    Route::prefix('/garages')->name('garages.')->group(function() {
+        Route::get('/', [GaragesController::class, 'show'])->name('index');
+        Route::get('-read', [GaragesController::class, 'read'])->name('read');
+        Route::get('-edit', [GaragesController::class, 'edit'])->name('edit');
+        Route::post('-update', [GaragesController::class, 'update'])->name('update');
+        Route::delete('-delete', [GaragesController::class, 'delete'])->name('delete');
     });
 });
 
