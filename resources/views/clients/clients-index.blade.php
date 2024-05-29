@@ -25,7 +25,7 @@
 
                     <td>
                         <div>
-                            <a class="btn"  href=" {{ Route('garages.show') }} ">afficher</a>
+                            <a class="btn"  href=" {{ Route('garages.show',[$client->id]) }} ">afficher</a>
                             <a class="btn"  href=" {{ Route('garages.edit') }} ">modifier</a>
                             <a class="btn"  href=" {{ Route('garages.delete') }} ">supprimer</a>
                         </div>
