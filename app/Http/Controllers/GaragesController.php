@@ -9,16 +9,16 @@ class GaragesController extends Controller
 {
     public function index(){
         $garages = Garage::all();
-        return view('garages.index', compact('garages'));
+        return view('pages.garages-index', compact('garages'));
     }
 
     public function show($id){
         $garage = Garage::findOrFail($id);
-        return view('garages.show', compact('garage'));
+        return view('pages.garages-show', compact('garage'));
     }
 
     public function create(){
-        return view('garages.create');
+        return view('pages.garages-create');
     }
 
     public function store(Request $request){
@@ -38,7 +38,7 @@ class GaragesController extends Controller
 
     public function edit($id){
         $garage = Garage::findOrFail($id);
-        return view('garages.edit', compact('garage'));
+        return view('pages.garages-edit', compact('garage'));
     }
 
     public function update(Request $request, $id){
