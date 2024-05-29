@@ -4,7 +4,7 @@
     <h2>Créer un nouveau client</h2>
 </div>
 <div class="container">
-    <form action="{{ route('clients.store') }}" method="POST">
+    <form action="{{ route('garages.store') }}" method="POST">
         @csrf
         <table class="table table-hover">
             <tr>
@@ -40,7 +40,7 @@
                 <td><button class="btn btn-block" type="submit">Créer</button></td>
             </tr>
         </table>
-        <a class="btn btn-block" href="{{ route('clients.index') }}">Retour à la liste</a>
+        <a class="btn btn-block" href="{{ route('garages.index') }}">Retour à la liste</a>
     </form>
 </div>
 

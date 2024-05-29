@@ -1,33 +1,35 @@
 @include('partiels.header')
 
 <div class="container">
-    <a href="{{ route('clients.create') }}" class="btn btn-block"><h2>Nouveau</h2></a>
+    <a href="{{ route('garages.create') }}" class="btn btn-block"><h2>Nouveau</h2></a>
 
     <table class="table table-hover">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nom</th>
-                <th>Statut</th>
-                <th>Téléphone</th>
-                <th>Email</th>
-                <th>Info</th>
+                <th>Adresse</th>
+                <th>Charges</th>
+                <th>Prix particulier</th>
+                <th>Prix entreprise</th>
+                <th>Remboursement</th>
+                <th>Date achat</th>
+                <th>Date fin emprunt</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($clients as $client)
+            @foreach ($garages as $garage)
                 <tr>
-                    @foreach ($client->toArray() as $key => $value)
+                    @foreach ($garage->toArray() as $key => $value)
                         @if ($key !== 'updated_at' && $key !== 'created_at')
                             <td>{{ $value }}</td>
                         @endif
                     @endforeach
                     <td>
                         <div>
-                            <a class="btn" href="{{ route('clients.show', $client->id) }}">Afficher</a>
-                            <a class="btn" href="{{ route('clients.edit', $client->id) }}">Modifier</a>
-                            <form action="{{ route('clients.destroy', $client->id) }}" method="POST" style="display:inline;">
+                            <a class="btn" href="{{ route('garages.show', $garage->id) }}">Afficher</a>
+                            <a class="btn" href="{{ route('garages.edit', $garage->id) }}">Modifier</a>
+                            <form action="{{ route('garages.destroy', $garage->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Supprimer</button>
