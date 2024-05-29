@@ -86,7 +86,7 @@ footer {
 .btn-danger {
   display: block;
   padding: 5px;
-  background-color: #007bff;
+  background-color: #F33;
   color: #fff;
   text-decoration: none;
   border: none;
@@ -99,7 +99,7 @@ footer {
 
 .btn-danger:hover {
   text-decoration: none;
-  background-color: #0056b3;
+  background-color: #F00;
 }
 
 
