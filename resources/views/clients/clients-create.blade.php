@@ -30,20 +30,11 @@
             </tr>
 
             <tr>
-                <th></th>
-                <td></td>
+                <th><label for="info">Info:</label></th>
+                <td><textarea id="info" name="info" class="form-control" rows="3" required></textarea></td>
             </tr>
 
         </table>
-
-        <div class="form-group">
-
-
-
-        <div class="form-group">
-            <label for="info">Info:</label>
-            <textarea id="info" name="info" class="form-control" rows="3" required></textarea>
-        </div>
 
         <button type="submit" class="btn">Créer</button>
     </form>
