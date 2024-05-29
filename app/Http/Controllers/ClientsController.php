@@ -10,18 +10,18 @@ class ClientsController extends Controller
     public function index()
     {
         $clients = Client::all();
-        return view('clients.index', compact('clients'));
+        return view('clients.clients-index', compact('clients'));
     }
 
     public function show($id)
     {
         $client = Client::findOrFail($id);
-        return view('clients.show', compact('client'));
+        return view('clients.clients-show', compact('client'));
     }
 
     public function create()
     {
-        return view('clients.create');
+        return view('clients.clients-create');
     }
 
     public function store(Request $request)
@@ -35,13 +35,13 @@ class ClientsController extends Controller
         ]);
 
         Client::create($data);
-        return redirect()->route('clients.index');
+        return redirect()->route('clients-index');
     }
 
     public function edit($id)
     {
         $client = Client::findOrFail($id);
-        return view('clients.edit', compact('client'));
+        return view('clients.clients-edit', compact('client'));
     }
 
     public function update(Request $request, $id)

@@ -10,18 +10,18 @@ class ContratsController extends Controller
     public function index()
     {
         $contrats = Contrat::all();
-        return view('contrats.index', compact('contrats'));
+        return view('contrats.contrats-index', compact('contrats'));
     }
 
     public function show($id)
     {
         $contrat = Contrat::findOrFail($id);
-        return view('contrats.show', compact('contrat'));
+        return view('contrats.contrats-show', compact('contrat'));
     }
 
     public function create()
     {
-        return view('contrats.create');
+        return view('contrats.contrats-create');
     }
 
     public function store(Request $request)
@@ -42,7 +42,7 @@ class ContratsController extends Controller
     public function edit($id)
     {
         $contrat = Contrat::findOrFail($id);
-        return view('contrats.edit', compact('contrat'));
+        return view('contrats.contrats-edit', compact('contrat'));
     }
 
     public function update(Request $request, $id)
