@@ -25,9 +25,9 @@
 
                     <td>
                         <div>
-                            <a class="btn"  href="#">afficher</a>
-                            <a class="btn"  href="#">modifier</a>
-                            <a class="btn"  href="#">supprimer</a>
+                            <a class="btn"  href=" {{ Route('garages.show') }} ">afficher</a>
+                            <a class="btn"  href=" {{ Route('garages.edit') }} ">modifier</a>
+                            <a class="btn"  href=" {{ Route('garages.delete') }} ">supprimer</a>
                         </div>
                     </td>
                 </tr>
