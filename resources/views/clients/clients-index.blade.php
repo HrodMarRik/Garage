@@ -23,7 +23,7 @@
                     @endforeach
 
                     <td>
-                        <div class="container">
+                        <div>
                             <a class="btn"  href="#">afficher</a>
                             <a class="btn"  href="#">modifier</a>
                             <a class="btn"  href="#">supprimer</a>
