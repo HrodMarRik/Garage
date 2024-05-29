@@ -8,12 +8,13 @@
             <th>Telephone</th>
             <th>mail</th>
             <th>info</th>
+            <th>action</th>
         </tr>
     </thead>
     <tbody>
-        @foreach ($garages as $garage)
+        @foreach ($clients as $client)
             <tr>
-                @foreach ($garage->toArray() as $key => $value)
+                @foreach ($client->toArray() as $key => $value)
                     @if ($key !== 'updated_at' && $key !== 'created_at')
                         <td>{{ $value }}</td>
                     @endif

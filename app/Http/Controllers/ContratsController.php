@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\View\View;
 use Illuminate\Http\Request;
-use App\Models\Contrats;
+use App\Models\Contrat;
 
 class ContratsController extends Controller
 {
     public function show(): View {
         // aller chercher le dico garages
-        $contrats = Garage::all();
+        $contrats = Contrat::all();
         return view('pages.contrats', [
             'contrats' => $contrats,
         ]);

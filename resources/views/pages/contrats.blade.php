@@ -7,12 +7,13 @@
             <th>id garages</th>
             <th>status</th>
             <th>structure</th>
+            <th>action</th>
         </tr>
     </thead>
     <tbody>
-        @foreach ($garages as $garage)
+        @foreach ($contrats as $contrat)
             <tr>
-                @foreach ($garage->toArray() as $key => $value)
+                @foreach ($contrat->toArray() as $key => $value)
                     @if ($key !== 'updated_at' && $key !== 'created_at')
                         <td>{{ $value }}</td>
                     @endif

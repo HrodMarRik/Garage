@@ -11,13 +11,7 @@
                 <div class="p-6 text-gray-900">
                     @if (Route::has("garages")||Route::has("contrats")||Route::has("clients"))
                         @if (Route::has("garages"))
-                            <a href=" {{ Route('garages') }}">mes garages</a><br>
-                        @endif
-                        @if (Route::has("clients"))
-                            <a href=" {{ Route('clients') }}">mes clients</a><br>
-                        @endif
-                        @if (Route::has("contrats"))
-                            <a href=" {{ Route('contrats') }}">mes contrats</a>
+                            <a class="btn" href=" {{ Route('garages') }}">Mon Supper Site</a><br>
                         @endif
                     @else
                         <p>pas de contenue</p>

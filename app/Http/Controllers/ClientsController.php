@@ -10,7 +10,7 @@ class ClientsController extends Controller
 {
     public function show(): View {
         // aller chercher le dico garages
-        $clients = Garage::all();
+        $clients = Client::all();
         return view('pages.clients', [
             'clients' => $clients,
         ]);
