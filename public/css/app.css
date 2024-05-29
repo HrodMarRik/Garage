@@ -25,6 +25,7 @@ header {
 nav {
   background-color: #444;
   padding: 10px;
+  margin: 5px;
 }
 
 nav ul {
@@ -75,10 +76,33 @@ footer {
   text-align: center;
 }
 
+
 .btn:hover {
   text-decoration: none;
   background-color: #0056b3;
 }
+
+/* Styles pour les boutons */
+.btn-danger {
+  display: block;
+  padding: 5px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+
+.btn-danger:hover {
+  text-decoration: none;
+  background-color: #0056b3;
+}
+
+
 
 /* css pour les tableau */
 table {

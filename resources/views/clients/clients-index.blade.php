@@ -1,17 +1,18 @@
 @include('partiels.header')
+
 <div class="container">
-        <a href="{{ Route('garages.create') }}" class="btn">nouveau</a>
+    <a href="{{ route('garages.create') }}" class="btn">Nouveau</a>
 
     <table class="table table-hover">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>nom</th>
-                <th>statut</th>
-                <th>Telephone</th>
-                <th>mail</th>
-                <th>info</th>
-                <th>action</th>
+                <th>Nom</th>
+                <th>Statut</th>
+                <th>Téléphone</th>
+                <th>Email</th>
+                <th>Info</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -25,15 +26,19 @@
 
                     <td>
                         <div>
-                            <a class="btn"  href=" {{ Route('garages.show',[$client->id]) }} ">afficher</a>
-                            <a class="btn"  href=" {{ Route('garages.edit') }} ">modifier</a>
-                            <a class="btn"  href=" {{ Route('garages.delete') }} ">supprimer</a>
+                            <a class="btn" href="{{ route('clients.show', [$client->id]) }}">Afficher</a>
+                            <a class="btn" href="{{ route('clients.edit', [$client->id]) }}">Modifier</a>
+                            <form action="{{ route('clients.destroy', [$client->id]) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn">Supprimer</button>
+                            </form>
                         </div>
                     </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
-
 </div>
+
 @include('partiels.footer')
