@@ -1,5 +1,6 @@
 @include('partiels.header')
 <div class="container">
+        <a href="{{ Route('garages.create') }}" class="btn">nouveau</a>
 
     <table class="table table-hover">
         <thead>
