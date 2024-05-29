@@ -12,9 +12,9 @@
         <nav>
             <ul>
                 <li><a href=" {{ Route('dashboard') }} ">Dashboard</a></li>
-                <li><a href=" {{ Route('garages') }} ">Garages</a></li>
-                <li><a href=" {{ Route('clients') }} ">Clients</a></li>
-                <li><a href=" {{ Route('contrats') }} ">Contrats</a></li>
+                <li><a href=" {{ Route('garages.index') }} ">Garages</a></li>
+                <li><a href=" {{ Route('clients.index') }} ">Clients</a></li>
+                <li><a href=" {{ Route('contrats.index') }} ">Contrats</a></li>
             </ul>
         </nav>
     </header>

@@ -38,6 +38,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/', [ContratsController::class, 'show'])->name('index');
         Route::get('-read', [ContratsController::class, 'read'])->name('read');
         Route::get('-edit', [ContratsController::class, 'edit'])->name('edit');
+        Route::post('-update', [ContratsController::class, 'update'])->name('update');
+        Route::delete('-delete', [ContratsController::class, 'delete'])->name('delete');
     });
 });
 
