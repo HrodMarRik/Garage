@@ -33,10 +33,11 @@
                 <th><label for="info" class="form-label">Info:</label></th>
                 <td><textarea id="info" name="info" class="form-control" rows="3" required></textarea></td>
             </tr>
-
+            <tr>
+                <th>Action:</th>
+                <td><button type="submit" class="btn">Créer</button></td>
+            </tr>
         </table>
-
-        <button type="submit" class="btn">Créer</button>
     </form>
 </div>
 
