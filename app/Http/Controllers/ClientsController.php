@@ -21,19 +21,19 @@ class ClientsController extends Controller
             'clients' => $clients,
         ]);
     }
-    public function edit(): View {
-        $clients = Client::all();
-        return view('pages.clients', [
-            'clients' => $clients,
-        ]);
-    }
     public function read(): View {
         $clients = Client::all();
         return view('pages.clients', [
             'clients' => $clients,
         ]);
     }
-    public function edit(): View {
+    public function update(): View {
+        $clients = Client::all();
+        return view('pages.clients', [
+            'clients' => $clients,
+        ]);
+    }
+    public function delete(): View {
         $clients = Client::all();
         return view('pages.clients', [
             'clients' => $clients,
