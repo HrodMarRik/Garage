@@ -15,4 +15,16 @@ class GaragesController extends Controller
             'garages' => $garages,
         ]);
     }
+    public function read(): View {
+        $clients = Client::all();
+        return view('pages.clients', [
+            'clients' => $clients,
+        ]);
+    }
+    public function edit(): View {
+        $clients = Client::all();
+        return view('pages.clients', [
+            'clients' => $clients,
+        ]);
+    }
 }
