@@ -33,9 +33,11 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/clients', [ClientsController::class, 'show'])->name('clients');
 
-    Route::prefix('/clients')
-    Route::get('/contrats', [ContratsController::class, 'show'])->name('contrats');
-    Route::get('/contrats-read', [ContratsController::class, 'read'])->name('contrats.read');
+    Route::prefix('/contrats')->name('contrats.')->group(function() {
+
+        Route::get('/', [ContratsController::class, 'show'])->name('');
+        Route::get('-read', [ContratsController::class, 'read'])->name('read');
+    });
 });
 
 require __DIR__.'/auth.php';
