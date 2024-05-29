@@ -8,7 +8,7 @@ use App\Models\Garage;
 
 class GaragesController extends Controller
 {
-    public function show(): View {
+    public function index(): View {
         $garages = Garage::all();
         return view('pages.garages', [
             'garages' => $garages,

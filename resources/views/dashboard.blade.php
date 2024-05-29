@@ -9,8 +9,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    @if (Route::has("garages"))
-                        <a class="btn" href=" {{ Route('garages') }}">Mon Supper Site</a>
+                    @if (Route::has("garages.index"))
+                        <a class="btn" href=" {{ Route('garages.index') }}">Mon Supper Site</a>
                     @else
                         <p>pas de contenue</p>
                     @endif
