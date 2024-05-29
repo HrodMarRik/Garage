@@ -14,4 +14,5 @@ class ClientsController extends Controller
         return view('pages.clients', [
             'clients' => $clients,
         ]);
+    }
 }
