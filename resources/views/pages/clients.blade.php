@@ -19,7 +19,7 @@
                         <td>{{ $value }}</td>
                     @endif
                 @endforeach
-                <td><a href="#">modifier</a></td>
+                <td><a class="btn"  href="#">modifier</a></td>
             </tr>
         @endforeach
     </tbody>
