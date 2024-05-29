@@ -8,7 +8,7 @@
 /* Styles de base pour le corps de la page */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1;
   background-color: #f7f7f7;
   color: #333;
 }
@@ -64,13 +64,15 @@ footer {
 /* Styles pour les boutons */
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 5px;
   background-color: #007bff;
   color: #fff;
   text-decoration: none;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  margin: 5px;
+
 }
 
 .btn:hover {

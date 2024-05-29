@@ -21,7 +21,12 @@
                             <td>{{ $value }}</td>
                         @endif
                     @endforeach
-                    <td><a class="btn"  href="#">modifier</a></td>
+
+                    <td>
+                        <a class="btn"  href="#">afficher</a>
+                        <a class="btn"  href="#">modifier</a>
+                        <a class="btn"  href="#">supprimer</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
