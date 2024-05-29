@@ -8,8 +8,32 @@ use App\Models\Client;
 
 class ClientsController extends Controller
 {
+    // menu clients
     public function show(): View {
-        // aller chercher le dico garages
+        $clients = Client::all();
+        return view('pages.clients', [
+            'clients' => $clients,
+        ]);
+    }
+    public function create(): View {
+        $clients = Client::all();
+        return view('pages.clients', [
+            'clients' => $clients,
+        ]);
+    }
+    public function edit(): View {
+        $clients = Client::all();
+        return view('pages.clients', [
+            'clients' => $clients,
+        ]);
+    }
+    public function read(): View {
+        $clients = Client::all();
+        return view('pages.clients', [
+            'clients' => $clients,
+        ]);
+    }
+    public function edit(): View {
         $clients = Client::all();
         return view('pages.clients', [
             'clients' => $clients,
