@@ -29,12 +29,23 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/garages', [GaragesController::class, 'show'])->name('garages');
+    Route::prefix('/contrats')->name('contrats.')->group(function() {
+        Route::get('/', [ContratsController::class, 'show'])->name('index');
+        Route::get('-read', [ContratsController::class, 'read'])->name('read');
+        Route::get('-edit', [ContratsController::class, 'edit'])->name('edit');
+        Route::post('-update', [ContratsController::class, 'update'])->name('update');
+        Route::delete('-delete', [ContratsController::class, 'delete'])->name('delete');
+    });
 
-    Route::get('/clients', [ClientsController::class, 'show'])->name('clients');
+    Route::prefix('/Clients')->name('Clients.')->group(function() {
+        Route::get('/', [ClientsController::class, 'show'])->name('index');
+        Route::get('-read', [ClientsController::class, 'read'])->name('read');
+        Route::get('-edit', [ClientsController::class, 'edit'])->name('edit');
+        Route::post('-update', [ClientsController::class, 'update'])->name('update');
+        Route::delete('-delete', [ClientsController::class, 'delete'])->name('delete');
+    });
 
     Route::prefix('/contrats')->name('contrats.')->group(function() {
-
         Route::get('/', [ContratsController::class, 'show'])->name('index');
         Route::get('-read', [ContratsController::class, 'read'])->name('read');
         Route::get('-edit', [ContratsController::class, 'edit'])->name('edit');
