@@ -37,7 +37,7 @@
             </tr>
             <tr>
                 <th>Action:</th>
-                <td><button class="btn" type="submit">Créer</button></td>
+                <td><button class="btn btn-block" type="submit">Créer</button></td>
             </tr>
         </table>
     </form>

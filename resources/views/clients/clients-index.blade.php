@@ -1,7 +1,7 @@
 @include('partiels.header')
 
 <div class="container">
-    <a href="{{ route('clients.create') }}" class="btn"><h2>Nouveau</h2></a>
+    <a href="{{ route('clients.create') }}" class="btn btn-block"><h2>Nouveau</h2></a>
 
     <table class="table table-hover">
         <thead>
