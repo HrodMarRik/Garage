@@ -2,6 +2,8 @@
 
 <div class="container">
     <h2>Créer un nouveau client</h2>
+</div>
+<div class="container">
     <form action="{{ route('clients.store') }}" method="POST">
         @csrf
         <table class="table table-hover">
@@ -35,7 +37,7 @@
             </tr>
             <tr>
                 <th>Action:</th>
-                <td><a class="btn"><button class="btn" type="submit">Créer</button></a></td>
+                <td><button class="btn" type="submit">Créer</button></td>
             </tr>
         </table>
     </form>
