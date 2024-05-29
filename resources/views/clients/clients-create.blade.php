@@ -40,6 +40,7 @@
                 <td><button class="btn btn-block" type="submit">Créer</button></td>
             </tr>
         </table>
+        <a class="btn btn-block" href="{{ route('clients.index') }}">Retour à la liste</a>
     </form>
 </div>
 
