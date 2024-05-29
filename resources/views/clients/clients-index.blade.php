@@ -23,9 +23,11 @@
                     @endforeach
 
                     <td>
-                        <a class="btn"  href="#">afficher</a>
-                        <a class="btn"  href="#">modifier</a>
-                        <a class="btn"  href="#">supprimer</a>
+                        <div class="container">
+                            <a class="btn"  href="#">afficher</a>
+                            <a class="btn"  href="#">modifier</a>
+                            <a class="btn"  href="#">supprimer</a>
+                        </div>
                     </td>
                 </tr>
             @endforeach
