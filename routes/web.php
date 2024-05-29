@@ -35,8 +35,9 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('/contrats')->name('contrats.')->group(function() {
 
-        Route::get('/', [ContratsController::class, 'show'])->name('');
+        Route::get('/', [ContratsController::class, 'show'])->name('index');
         Route::get('-read', [ContratsController::class, 'read'])->name('read');
+        Route::get('-edit', [ContratsController::class, 'edit'])->name('edit');
     });
 });
 
