@@ -1,6 +1,6 @@
 @include('partiels.header')
 
-<div class="container"><h2>Modifier le contrat</h2></div>
+<div class="container"><h2>Nouveau contrat</h2></div>
 <div class="container">
     <form action="{{ route('contrats.store') }}" method="POST">
         @csrf
@@ -36,21 +36,30 @@
                 <th><label for="status" class="form-label">Statut:</label></th>
                 <td>
                     <select name="status" class="form-control" required>
-                        <option value="inactive">En attente</option>
-                        <option value="active">Actif</option>
-                        <option value="deleted">Terminé</option>
+                        <option value="inactive">inactive</option>
+                        <option value="active">active</option>
+                        <option value="delete">delete</option>
+                        <option value="pause">pause</option>
                     </select>
                 </td>
             </tr>
 
             <tr>
                 <th><label for="structure" class="form-label">Structure:</label></th>
-                <td><input type="text" id="structure" name="structure" class="form-control"required></td>
+                <td>
+                    <select id="structure" name="structure" class="form-control" required>
+                        @foreach($model_contrats as $model_contrat)
+                            <option>
+                                {{ $model_contrat->structure }}
+                            </option>
+                        @endforeach
+                    </select>
+                </td>
             </tr>
 
             <tr>
                 <th>Action:</th>
-                <td><button class="btn btn-block" type="submit">Enregistrer les modifications</button></td>
+                <td><button class="btn btn-block" type="submit">Enregistrer le contrat</button></td>
             </tr>
         </table>
     </form>
