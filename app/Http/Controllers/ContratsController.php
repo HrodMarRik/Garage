@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contrat;
+use App\Models\Client;
+use App\Models\Garage;
 use Illuminate\Http\Request;
 
 class ContratsController extends Controller
@@ -21,18 +23,18 @@ class ContratsController extends Controller
 
     public function create()
     {
-        return view('contrats.contrats-create');
+        $clients = Client::all();
+        $garages = Garage::all();
+        return view('contrats.contrats-create', compact('clients', 'garages'));
     }
 
     public function store(Request $request)
     {
         $data = $request->validate([
-            'client_id' => 'required|integer',
-            'garage_id' => 'required|integer',
-            'details' => 'nullable|string',
-            'start_date' => 'required|date',
-            'end_date' => 'required|date',
-            'price' => 'required|numeric',
+            'id_client' => 'required|integer|exists:clients,id',
+            'id_garage' => 'required|integer|exists:garages,id',
+            'status' => 'required|string',
+            'structure' => 'required|string',
         ]);
 
         Contrat::create($data);
@@ -42,18 +44,18 @@ class ContratsController extends Controller
     public function edit($id)
     {
         $contrat = Contrat::findOrFail($id);
-        return view('contrats.contrats-edit', compact('contrat'));
+        $clients = Client::all();
+        $garages = Garage::all();
+        return view('contrats.contrats-edit', compact('contrat', 'clients', 'garages'));
     }
 
     public function update(Request $request, $id)
     {
         $data = $request->validate([
-            'client_id' => 'required|integer',
-            'garage_id' => 'required|integer',
-            'details' => 'nullable|string',
-            'start_date' => 'required|date',
-            'end_date' => 'required|date',
-            'price' => 'required|numeric',
+            'id_client' => 'required|integer|exists:clients,id',
+            'id_garage' => 'required|integer|exists:garages,id',
+            'status' => 'required|string',
+            'structure' => 'required|string',
         ]);
 
         $contrat = Contrat::findOrFail($id);
