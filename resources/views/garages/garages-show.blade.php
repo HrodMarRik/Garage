@@ -1,10 +1,10 @@
 @include('partiels.header')
 
+<div class="container"><h2>Détails du garage</h2></div>
 <div class="container">
-    <h2>Détails du client</h2>
     <table class="table table-hover">
         <tbody>
-            @foreach ($client->toArray() as $key => $value)
+            @foreach ($garage->toArray() as $key => $value)
                 <tr>
                     <th>{{ $key }}</th>
                     <td>{{ $value }}</td>
@@ -13,8 +13,8 @@
             <tr>
                 <th>action</th>
                 <td>
-                    <a class="btn btn-block" href="{{ route('clients.edit', $client->id) }}">Modifier</a>
-                    <form action="{{ route('clients.destroy', $client->id) }}" method="POST" style="display:inline;">
+                    <a class="btn btn-block" href="{{ route('garages.edit', $garage->id) }}">Modifier</a>
+                    <form action="{{ route('garages.destroy', $garage->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn-danger btn-block">Supprimer</button>
@@ -23,7 +23,7 @@
             </tr>
         </tbody>
     </table>
-    <a class="btn btn-block" href="{{ route('clients.index') }}">Retour à la liste</a>
+    <a class="btn btn-block" href="{{ route('garages.index') }}">Retour à la liste</a>
 </div>
 
 @include('partiels.footer')

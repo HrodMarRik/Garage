@@ -43,31 +43,6 @@
                 <th><label for="date_fin_remboursement_emprunt" class="form-label">Date de Fin de Remboursement de l'Emprunt</label></th>
                 <td><input type="date" name="date_fin_remboursement_emprunt" id="date_fin_remboursement_emprunt" class="form-control" value="{{ $garage->date_fin_remboursement_emprunt }}" required></td>
             </tr>
-
-            <tr>
-                <th><label for="statut" class="form-label">Statut</label></th>
-                <td>
-                    <select name="statut" id="statut" class="form-control" required>
-                        <option value="entreprise" {{ $garage->statut == 'entreprise' ? 'selected' : '' }}>Entreprise</option>
-                        <option value="particulier" {{ $garage->statut == 'particulier' ? 'selected' : '' }}>Particulier</option>
-                    </select>
-                </td>
-            </tr>
-
-            <tr>
-                <th><label for="telephone" class="form-label">Téléphone</label></th>
-                <td><input type="text" name="telephone" id="telephone" class="form-control" value="{{ $garage->telephone }}" required></td>
-            </tr>
-
-            <tr>
-                <th><label for="email" class="form-label">Email</label></th>
-                <td><input type="email" name="email" id="email" class="form-control" value="{{ $garage->email }}" required></td>
-            </tr>
-
-            <tr>
-                <th><label for="info" class="form-label">Informations</label></th>
-                <td><textarea rows="5" name="info" id="info" class="form-control" required>{{ $garage->info }}</textarea></td>
-            </tr>
             <tr>
                 <th>Action</th>
                 <td><button type="submit" class="btn btn-block">Enregistrer les modifications</button></td>
