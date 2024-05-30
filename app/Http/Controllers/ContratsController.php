@@ -26,7 +26,8 @@ class ContratsController extends Controller
     {
         $clients = Client::all();
         $garages = Garage::all();
-        return view('contrats.contrats-create', compact('clients', 'garages'));
+        $Modelcontrats = Modelcontrat::all();
+        return view('contrats.contrats-create', compact('clients', 'garages', 'Modelcontrats'));
     }
 
     public function store(Request $request)

@@ -48,9 +48,9 @@
                 <th><label for="structure" class="form-label">Structure:</label></th>
                 <td>
                     <select id="structure" name="structure" class="form-control" required>
-                        @foreach($model_contrats as $model_contrat)
+                        @foreach($Modelcontrats as $model_contrat)
                             <option>
-                                {{ $model_contrat->name }}
+                                {{ $Modelcontrat->name }}
                             </option>
                         @endforeach
                     </select>
