@@ -66,6 +66,16 @@ Route::middleware('auth')->group(function () {
         Route::put('/{id}', [GaragesController::class, 'update'])->name('update');
         Route::delete('/{id}', [GaragesController::class, 'destroy'])->name('destroy');
     });
+    Route::prefix('model_contrats')->name('model_contrats.')->group(function () {
+        Route::get('/', [model_contratsController::class, 'index'])->name('index');
+        Route::get('/create', [model_contratsController::class, 'create'])->name('create');
+        Route::post('/', [model_contratsController::class, 'store'])->name('store');
+        Route::get('/{id}', [model_contratsController::class, 'show'])->name('show');
+        Route::get('/{id}/edit', [model_contratsController::class, 'edit'])->name('edit');
+        Route::put('/{id}', [model_contratsController::class, 'update'])->name('update');
+        Route::delete('/{id}', [model_contratsController::class, 'destroy'])->name('destroy');
+    });
+
 });
 
 // Inclusion des routes d'authentification
