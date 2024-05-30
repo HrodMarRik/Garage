@@ -7,6 +7,10 @@
         @method('PUT')
         <table class="table table-hover">
             <tr>
+                <th><label for="name" class="form-label">name:</label></th>
+                <td><input type="text" id="name" name="name" class="form-control" value="{{ $contrat->name }}" required></td>
+            </tr>
+            <tr>
                 <th><label for="status" class="form-label">Status:</label></th>
                 <td><input type="text" id="status" name="status" class="form-control" value="{{ $contrat->status }}" required></td>
             </tr>
