@@ -4,7 +4,7 @@
     <h2>Détails du client</h2>
     <table class="table table-hover">
         <tbody>
-            @foreach ($client->toArray() as $key => $value)
+            @foreach ($contrat->toArray() as $key => $value)
                 <tr>
                     <th>{{ $key }}</th>
                     <td>{{ $value }}</td>
@@ -13,8 +13,8 @@
             <tr>
                 <th>action</th>
                 <td>
-                    <a class="btn btn-block" href="{{ route('clients.edit', $client->id) }}">Modifier</a>
-                    <form action="{{ route('clients.destroy', $client->id) }}" method="POST" style="display:inline;">
+                    <a class="btn btn-block" href="{{ route('contrats.edit', $contrat->id) }}">Modifier</a>
+                    <form action="{{ route('contrats.destroy', $contrat->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn-danger btn-block">Supprimer</button>

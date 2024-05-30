@@ -7,7 +7,7 @@
         <thead>
             <tr>
                 <th>id</th>
-                <th>id_contrat</th>
+                <th>id_client</th>
                 <th>id_garage</th>
                 <th>Statut</th>
                 <th>structure</th>
