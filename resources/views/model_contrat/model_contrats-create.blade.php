@@ -4,22 +4,20 @@
     <h2>Créer un nouveau contrat</h2>
     <form action="{{ route('contrats.store') }}" method="POST">
         @csrf
-        <table class="table table-hover">
-            <tr>
-                <th><label for="status" class="form-label">Status:</label></th>
-                <td><input type="text" id="status" name="status" class="form-control" required></td>
-            </tr>
-            <tr>
-                <th><label for="structure" class="form-label">Structure:</label></th>
-                <td><input type="text" id="structure" name="structure" class="form-control" required></td>
-            </tr>
-            <tr>
-                <th>Action:</th>
-                <td><button type="submit" class="btn btn-block">Créer</button></td>
-            </tr>
-        </table>
+        <div class="form-group">
+            <label for="status">Status :</label>
+            <select name="status" id="status" class="form-control" required>
+                <option value="pending">En attente</option>
+                <option value="active">Actif</option>
+                <option value="completed">Terminé</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="structure">Structure :</label>
+            <input type="text" name="structure" id="structure" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Créer</button>
     </form>
-    <a class="btn" href="{{ route('contrats.index') }}">Retour à la liste</a>
 </div>
 
 @include('partiels.footer')

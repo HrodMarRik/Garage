@@ -14,7 +14,7 @@ class ModelcontratFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'status' => $this->faker->randomElement(['pending', 'active', 'completed']),
-            'structure' => $this->faker->word,
+            'structure' => $this->faker->paragraph,
         ];
     }
 }

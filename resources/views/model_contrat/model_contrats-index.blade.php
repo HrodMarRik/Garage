@@ -8,6 +8,7 @@
         <thead>
             <tr>
                 <th>ID</th>
+                <th>name</th>
                 <th>Status</th>
                 <th>Structure</th>
                 <th>Actions</th>
@@ -17,6 +18,7 @@
             @foreach ($contrats as $contrat)
                 <tr>
                     <td>{{ $contrat->id }}</td>
+                    <td>{{ $contrat->name }}</td>
                     <td>{{ $contrat->status }}</td>
                     <td>{{ $contrat->structure }}</td>
                     <td>
