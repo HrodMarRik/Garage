@@ -2,7 +2,7 @@
 
 <div class="container">
     <h2>Modifier le contrat</h2>
-    <form action="{{ route('contrats.update', $contrat->id) }}" method="POST">
+    <form action="{{ route('model_contrats.update', $contrat->id) }}" method="POST">
         @csrf
         @method('PUT')
         <table class="table table-hover">
