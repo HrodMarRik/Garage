@@ -9,6 +9,7 @@ class Modelcontrat extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'name',
         'status',
         'structure',
     ];
