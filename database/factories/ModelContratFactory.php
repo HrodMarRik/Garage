@@ -12,6 +12,7 @@ class ModelContratFactory extends Factory
     public function definition()
     {
         return [
+            'name' => $this->faker->name(),
             'status' => $this->faker->randomElement(['pending', 'active', 'completed']),
             'structure' => $this->faker->word,
         ];
