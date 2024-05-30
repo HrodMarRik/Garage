@@ -7,37 +7,62 @@
     <form action="{{ route('clients.store') }}" method="POST">
         @csrf
         <table class="table table-hover">
-            <tr>
-                <th><label for="name" class="form-label">Nom:</label></th>
-                <td><input type="text" id="name" name="name" class="form-control" required></td>
-            </tr>
 
             <tr>
-                <th><label for="statut" class="form-label">Statut:</label></th>
-                <td><select id="statut" name="statut" class="form-control" required>
-                        <option value="entreprise">Entreprise</option>
-                        <option value="particulier">Particulier</option>
-                    </select>
+                <th><label for="nom">Nom</label></th>
+                <td>
+                    <input type="text" name="nom" id="nom" class="form-control" required>
+                    @error('nom')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </td>
             </tr>
 
             <tr>
-                <th><label for="telephone" class="form-label">Téléphone:</label></th>
-                <td><input type="text" id="telephone" name="telephone" class="form-control" required></td>
+                <th><label for="statut">Statut</label></th>
+                <td>
+                    <select name="statut" id="statut" class="form-control" required>
+                        <option>Entreprise</option>
+                        <option>Particulier</option>
+                    </select>
+                    @error('statut')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </td>
             </tr>
 
             <tr>
-                <th><label for="email" class="form-label">Email:</label></th>
-                <td><input type="email" id="email" name="email" class="form-control" required></td>
+                <th><label for="telephone">Téléphone</label></th>
+                <td>
+                    <input type="text" name="telephone" id="telephone" class="form-control" required>
+                    @error('telephone')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </td>
             </tr>
 
             <tr>
-                <th><label for="info" class="form-label">Info:</label></th>
-                <td><textarea id="info" name="info" class="form-control" rows="3" required></textarea></td>
+                <th><label for="email">Email</label></th>
+                <td>
+                    <input type="email" name="email" id="email" class="form-control" required>
+                    @error('email')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </td>
+            </tr>
+
+            <tr>
+                <th><label for="info">Informations</label></th>
+                <td>
+                    <textarea rows="5" name="info" id="info" class="form-control" required>{{ $client->info }}</textarea>
+                    @error('info')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </td>
             </tr>
             <tr>
-                <th>Action:</th>
-                <td><button class="btn btn-block" type="submit">Créer</button></td>
+                <th>Action</th>
+                <td><button type="submit" class="btn btn-block">Enregistrer les modifications</button></td>
             </tr>
         </table>
         <a class="btn btn-block" href="{{ route('clients.index') }}">Retour à la liste</a>

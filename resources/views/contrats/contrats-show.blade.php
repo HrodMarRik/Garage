@@ -1,6 +1,8 @@
 @include('partiels.header')
 
-<div class="container"><h2>Détails du client</h2></div>
+<div class="container">
+    <h2>Détails du contrat</h2>
+</div>
 <div class="container">
     <table class="table table-hover">
         <tbody>

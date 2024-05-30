@@ -1,8 +1,5 @@
 @include('partiels.header')
 <div class="container">
-    <h2>Liste des Contrats</h2>
-</div>
-<div class="container">
     <a href="{{ route('contrats.create') }}" class="btn btn-block">Créer un nouveau contrat</a>
     <table class="table table-hover">
         <thead>

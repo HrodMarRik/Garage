@@ -1,6 +1,8 @@
 @include('partiels.header')
 
-<div class="container"><h2>Modifier le contrat</h2></div>
+<div class="container">
+    <h2>Modifier le contrat</h2>
+</div>
 <div class="container">
     <form action="{{ route('contrats.update', $contrat->id) }}" method="POST">
         @csrf
@@ -16,6 +18,9 @@
                             </option>
                         @endforeach
                     </select>
+                    @error('id_client')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </td>
             </tr>
 
@@ -29,12 +34,20 @@
                             </option>
                         @endforeach
                     </select>
+                    @error('id_garage')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </td>
             </tr>
 
             <tr>
                 <th><label for="status" class="form-label">Statut:</label></th>
-                <td><input type="text" id="status" name="status" class="form-control" value="{{ $contrat->status }}" required></td>
+                <td>
+                    <input type="text" id="status" name="status" class="form-control" value="{{ $contrat->status }}" required>
+                    @error('status')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </td>
             </tr>
 
             <tr>
@@ -47,6 +60,9 @@
                             </option>
                         @endforeach
                     </select>
+                    @error('structure')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </td>
             </tr>
 

@@ -1,7 +1,8 @@
 @include('partiels.header')
-
 <div class="container">
     <h2>Modifier le garage</h2>
+</div>
+<div class="container">
     <form action="{{ route('garages.update', $garage->id) }}" method="POST">
         @csrf
         @method('PUT')

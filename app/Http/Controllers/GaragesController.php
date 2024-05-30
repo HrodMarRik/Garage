@@ -27,13 +27,13 @@ class GaragesController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'address' => 'required|string|max:255',
+            'adresse' => 'required|string|max:255',
             'charges' => 'required|numeric',
-            'price_particulier' => 'required|numeric',
-            'price_entreprise' => 'required|numeric',
-            'monthly_repayment' => 'nullable|numeric',
-            'purchase_date' => 'required|date',
-            'loan_end_date' => 'nullable|date',
+            'prix_particulier' => 'required|numeric',
+            'prix_entreprise' => 'required|numeric',
+            'remboursement_emprunt_mois' => 'nullable|numeric',
+            'date_achat' => 'required|date',
+            'date_fin_remboursement_emprunt' => 'nullable|date',
         ]);
 
         Garage::create($data);
@@ -49,13 +49,13 @@ class GaragesController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->validate([
-            'address' => 'required|string|max:255',
-            'charges' => 'required|numeric',
-            'price_particulier' => 'required|numeric',
-            'price_entreprise' => 'required|numeric',
-            'monthly_repayment' => 'nullable|numeric',
-            'purchase_date' => 'required|date',
-            'loan_end_date' => 'nullable|date',
+            'adresse' => 'required|string|max:255',
+            'montant_charges' => 'required|numeric',
+            'prix_particulier' => 'required|numeric',
+            'prix_entreprise' => 'required|numeric',
+            'remboursement_emprunt_mois' => 'nullable|numeric',
+            'date_achat' => 'required|date',
+            'date_fin_remboursement_emprunt' => 'nullable|date',
         ]);
 
         $garage = Garage::findOrFail($id);

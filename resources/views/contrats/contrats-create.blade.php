@@ -1,6 +1,8 @@
 @include('partiels.header')
 
-<div class="container"><h2>Nouveau contrat</h2></div>
+<div class="container">
+    <h2>Nouveau contrat</h2>
+</div>
 <div class="container">
     <form action="{{ route('contrats.store') }}" method="POST">
         @csrf
@@ -10,9 +12,12 @@
                 <td>
                     <select id="id_client" name="id_client" class="form-control" required>
                         @foreach($clients as $client)
-                            <option value="{{ $client->id }}">{{ $client->name }}</option>
+                            <option>{{ $client->name }}</option>
                         @endforeach
                     </select>
+                    @error('id_client')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </td>
             </tr>
 
@@ -21,21 +26,22 @@
                 <td>
                     <select id="id_garage" name="id_garage" class="form-control" required>
                         @foreach($garages as $garage)
-                            <option value="{{ $garage->id }}">{{ $garage->adresse }}</option>
+                            <option>{{ $garage->adresse }}</option>
                         @endforeach
                     </select>
+                    @error('id_garage')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </td>
             </tr>
 
             <tr>
                 <th><label for="status" class="form-label">Statut:</label></th>
                 <td>
-                    <select name="status" class="form-control" required>
-                        <option value="inactive">inactive</option>
-                        <option value="active">active</option>
-                        <option value="delete">delete</option>
-                        <option value="pause">pause</option>
-                    </select>
+                    <input type="text" id="status" name="status" class="form-control" required>
+                    @error('status')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </td>
             </tr>
 
@@ -47,12 +53,15 @@
                             <option>{{ $model_contrat->name }}</option>
                         @endforeach
                     </select>
+                    @error('structure')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </td>
             </tr>
 
             <tr>
                 <th>Action:</th>
-                <td><button class="btn btn-block" type="submit">Enregistrer le contrat</button></td>
+                <td><button class="btn btn-block" type="submit">Enregistrer les modifications</button></td>
             </tr>
         </table>
     </form>

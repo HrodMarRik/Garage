@@ -11,7 +11,12 @@
 
             <tr>
                 <th><label for="nom">Nom</label></th>
-                <td><input type="text" name="nom" id="nom" class="form-control" value="{{ $client->nom }}" required></td>
+                <td>
+                    <input type="text" name="nom" id="nom" class="form-control" value="{{ $client->name }}" required>
+                    @error('nom')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </td>
             </tr>
 
             <tr>
@@ -21,22 +26,40 @@
                         <option value="entreprise" {{ $client->statut == 'entreprise' ? 'selected' : '' }}>Entreprise</option>
                         <option value="particulier" {{ $client->statut == 'particulier' ? 'selected' : '' }}>Particulier</option>
                     </select>
+                    @error('statut')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </td>
             </tr>
 
             <tr>
                 <th><label for="telephone">Téléphone</label></th>
-                <td><input type="text" name="telephone" id="telephone" class="form-control" value="{{ $client->telephone }}" required></td>
+                <td>
+                    <input type="text" name="telephone" id="telephone" class="form-control" value="{{ $client->phone_number }}" required>
+                    @error('telephone')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </td>
             </tr>
 
             <tr>
                 <th><label for="email">Email</label></th>
-                <td><input type="email" name="email" id="email" class="form-control" value="{{ $client->email }}" required></td>
+                <td>
+                    <input type="email" name="email" id="email" class="form-control" value="{{ $client->mail }}" required>
+                    @error('email')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </td>
             </tr>
 
             <tr>
                 <th><label for="info">Informations</label></th>
-                <td><textarea rows="5" name="info" id="info" class="form-control" required>{{ $client->info }}</textarea></td>
+                <td>
+                    <textarea rows="5" name="info" id="info" class="form-control" required>{{ $client->info }}</textarea>
+                    @error('info')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </td>
             </tr>
             <tr>
                 <th>Action</th>
