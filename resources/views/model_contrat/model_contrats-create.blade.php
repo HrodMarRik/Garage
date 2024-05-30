@@ -21,13 +21,10 @@
             </tr>
             <tr>
                 <th><label for="structure"  class="form-label"> structure :</label></th>
-                <td><input type="text" name="structure" class="form-control" required></td>
-            </tr>
-            <tr>
-                <th>action</th>
-                <button type="submit" class="btn btn-block">Créer</button>
+                <td><textarea rows="5" type="text" name="structure" class="form-control" required></textarea></td>
             </tr>
         </table>
+        <button type="submit" class="btn btn-block">Créer</button>
     </form>
 </div>
 

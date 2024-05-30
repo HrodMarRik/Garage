@@ -4,16 +4,13 @@
 <div class="container">
     <form action="{{ route('contrats.store') }}" method="POST">
         @csrf
-        @method('PUT')
         <table class="table table-hover">
             <tr>
                 <th><label for="id_client" class="form-label">Client:</label></th>
                 <td>
                     <select id="id_client" name="id_client" class="form-control" required>
                         @foreach($clients as $client)
-                            <option>
-                                {{ $client->name }}
-                            </option>
+                            <option value="{{ $client->id }}">{{ $client->name }}</option>
                         @endforeach
                     </select>
                 </td>
@@ -24,9 +21,7 @@
                 <td>
                     <select id="id_garage" name="id_garage" class="form-control" required>
                         @foreach($garages as $garage)
-                            <option>
-                                {{ $garage->adresse }}
-                            </option>
+                            <option value="{{ $garage->id }}">{{ $garage->adresse }}</option>
                         @endforeach
                     </select>
                 </td>
@@ -48,10 +43,8 @@
                 <th><label for="structure" class="form-label">Structure:</label></th>
                 <td>
                     <select id="structure" name="structure" class="form-control" required>
-                        @foreach($Modelcontrats as $model_contrat)
-                            <option>
-                                {{ $Modelcontrat->name }}
-                            </option>
+                        @foreach($modelContrats as $model_contrat)
+                            <option>{{ $model_contrat->name }}</option>
                         @endforeach
                     </select>
                 </td>
