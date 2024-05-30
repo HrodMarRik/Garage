@@ -2,7 +2,7 @@
 
 <div class="container">
     <h2>Créer un nouveau model de contrat</h2>
-    <form action="{{ route('contrats.store') }}" method="POST">
+    <form action="{{ route('model_contrats.store') }}" method="POST">
         @csrf
         <table class="table table-hover">
             <tr>
