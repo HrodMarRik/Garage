@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\model_contrat;
 use Illuminate\Http\Request;
 
-class ModelContratController extends Controller
+class Model_contratsController extends Controller
 {
     public function index()
     {
