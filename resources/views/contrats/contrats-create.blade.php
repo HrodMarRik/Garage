@@ -2,7 +2,7 @@
 
 <div class="container"><h2>Modifier le contrat</h2></div>
 <div class="container">
-    <form action="{{ route('contrats.update', $contrat->id) }}" method="POST">
+    <form action="{{ route('contrats.store') }}" method="POST">
         @csrf
         @method('PUT')
         <table class="table table-hover">
@@ -11,7 +11,7 @@
                 <td>
                     <select id="id_client" name="id_client" class="form-control" required>
                         @foreach($clients as $client)
-                            <option {{ $contrat->id_client == $client->id ? 'selected' : '' }}>
+                            <option>
                                 {{ $client->name }}
                             </option>
                         @endforeach
@@ -24,7 +24,7 @@
                 <td>
                     <select id="id_garage" name="id_garage" class="form-control" required>
                         @foreach($garages as $garage)
-                            <option {{ $contrat->id_garage == $garage->id ? 'selected' : '' }}>
+                            <option>
                                 {{ $garage->adresse }}
                             </option>
                         @endforeach
@@ -34,7 +34,13 @@
 
             <tr>
                 <th><label for="status" class="form-label">Statut:</label></th>
-                <td><input type="text" id="status" name="status" class="form-control" required></td>
+                <td>
+                    <select name="status" class="form-control" required>
+                        <option value="inactive">En attente</option>
+                        <option value="active">Actif</option>
+                        <option value="deleted">Terminé</option>
+                    </select>
+                </td>
             </tr>
 
             <tr>
