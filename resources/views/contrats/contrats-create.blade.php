@@ -50,7 +50,7 @@
                     <select id="structure" name="structure" class="form-control" required>
                         @foreach($model_contrats as $model_contrat)
                             <option>
-                                {{ $model_contrat->structure }}
+                                {{ $model_contrat->name }}
                             </option>
                         @endforeach
                     </select>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contrat;
+use App\Models\Modelcontrat;
 use App\Models\Client;
 use App\Models\Garage;
 use Illuminate\Http\Request;
