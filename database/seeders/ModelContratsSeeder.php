@@ -2,14 +2,14 @@
 
 namespace Database\Seeders;
 
-use App\Models\model_contrat;
+use App\Models\model_contrats;
 use Illuminate\Database\Seeder;
 
-class ModelContratSeeder extends Seeder
+class ModelContratsSeeder extends Seeder
 {
     public function run()
     {
         // Créer 10 instances de model_contrat
-        model_contrat::factory()->count(10)->create();
+        model_contrats::factory()->count(10)->create();
     }
 }

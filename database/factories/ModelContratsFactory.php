@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ModelContratFactory extends Factory
 {
-    protected $model = model_contrat::class;
+    protected $model = model_contrats::class;
 
     public function definition()
     {
