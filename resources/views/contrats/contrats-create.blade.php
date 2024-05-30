@@ -1,47 +1,55 @@
 @include('partiels.header')
 
 <div class="container">
-    <h2>Créer un nouveau client</h2>
-</div>
-<div class="container">
-    <form action="{{ route('clients.store') }}" method="POST">
+    <h2>Modifier le contrat</h2>
+    <form action="{{ route('contrats.update', $contrat->id) }}" method="POST">
         @csrf
+        @method('PUT')
         <table class="table table-hover">
             <tr>
-                <th><label for="name" class="form-label">Nom:</label></th>
-                <td><input type="text" id="name" name="name" class="form-control" required></td>
-            </tr>
-
-            <tr>
-                <th><label for="statut" class="form-label">Statut:</label></th>
-                <td><select id="statut" name="statut" class="form-control" required>
-                        <option value="entreprise">Entreprise</option>
-                        <option value="particulier">Particulier</option>
+                <th><label for="id_client" class="form-label">Client:</label></th>
+                <td>
+                    <select id="id_client" name="id_client" class="form-control" required>
+                        @foreach($clients as $client)
+                            <option {{ $contrat->id_client == $client->id ? 'selected' : '' }}>
+                                {{ $client->name }}
+                            </option>
+                        @endforeach
                     </select>
                 </td>
             </tr>
 
             <tr>
-                <th><label for="telephone" class="form-label">Téléphone:</label></th>
-                <td><input type="text" id="telephone" name="telephone" class="form-control" required></td>
+                <th><label for="id_garage" class="form-label">Garage:</label></th>
+                <td>
+                    <select id="id_garage" name="id_garage" class="form-control" required>
+                        @foreach($garages as $garage)
+                            <option {{ $contrat->id_garage == $garage->id ? 'selected' : '' }}>
+                                {{ $garage->adresse }}
+                            </option>
+                        @endforeach
+                    </select>
+                </td>
             </tr>
 
             <tr>
-                <th><label for="email" class="form-label">Email:</label></th>
-                <td><input type="email" id="email" name="email" class="form-control" required></td>
+                <th><label for="status" class="form-label">Statut:</label></th>
+                <td><input type="text" id="status" name="status" class="form-control" required></td>
             </tr>
 
             <tr>
-                <th><label for="info" class="form-label">Info:</label></th>
-                <td><textarea id="info" name="info" class="form-control" rows="3" required></textarea></td>
+                <th><label for="structure" class="form-label">Structure:</label></th>
+                <td><input type="text" id="structure" name="structure" class="form-control"required></td>
             </tr>
+
             <tr>
                 <th>Action:</th>
-                <td><button class="btn btn-block" type="submit">Créer</button></td>
+                <td><button class="btn btn-block" type="submit">Enregistrer les modifications</button></td>
             </tr>
         </table>
-        <a class="btn btn-block" href="{{ route('clients.index') }}">Retour à la liste</a>
     </form>
+
+    <a class="btn btn-block" href="{{ route('contrats.index') }}">Retour à la liste</a>
 </div>
 
 @include('partiels.footer')

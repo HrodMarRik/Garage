@@ -1,7 +1,7 @@
 @include('partiels.header')
 
+<div class="container"><h2>Détails du client</h2></div>
 <div class="container">
-    <h2>Détails du client</h2>
     <table class="table table-hover">
         <tbody>
             @foreach ($contrat->toArray() as $key => $value)
