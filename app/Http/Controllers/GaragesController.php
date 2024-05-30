@@ -7,21 +7,25 @@ use Illuminate\Http\Request;
 
 class GaragesController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $garages = Garage::all();
         return view('garages.garages-index', compact('garages'));
     }
 
-    public function show($id){
+    public function show($id)
+    {
         $garage = Garage::findOrFail($id);
         return view('garages.garages-show', compact('garage'));
     }
 
-    public function create(){
+    public function create()
+    {
         return view('garages.garages-create');
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $data = $request->validate([
             'address' => 'required|string|max:255',
             'charges' => 'required|numeric',
@@ -36,12 +40,14 @@ class GaragesController extends Controller
         return redirect()->route('garages.index');
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
         $garage = Garage::findOrFail($id);
         return view('garages.garages-edit', compact('garage'));
     }
 
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
         $data = $request->validate([
             'address' => 'required|string|max:255',
             'charges' => 'required|numeric',
@@ -57,10 +63,10 @@ class GaragesController extends Controller
         return redirect()->route('garages.index');
     }
 
-    public function destroy($id){
+    public function destroy($id)
+    {
         $garage = Garage::findOrFail($id);
         $garage->delete();
         return redirect()->route('garages.index');
     }
-
 }
