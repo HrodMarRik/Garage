@@ -1,7 +1,7 @@
 @include('partiels.header')
 
+<div class="container"><h2>Modifier le contrat</h2></div>
 <div class="container">
-    <h2>Modifier le contrat</h2>
     <form action="{{ route('contrats.update', $contrat->id) }}" method="POST">
         @csrf
         @method('PUT')

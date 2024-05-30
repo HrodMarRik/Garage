@@ -27,6 +27,7 @@ class Model_contratsController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
+            'name' => 'required|string',
             'status' => 'required|string',
             'structure' => 'required|string',
         ]);
@@ -44,6 +45,7 @@ class Model_contratsController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->validate([
+            'name' => 'required|string',
             'status' => 'required|string',
             'structure' => 'required|string',
         ]);

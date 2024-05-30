@@ -1,7 +1,7 @@
 @include('partiels.header')
 
+<div class="container"><h2>Créer un nouveau model de contrat</h2></div>
 <div class="container">
-    <h2>Créer un nouveau model de contrat</h2>
     <form action="{{ route('model_contrats.store') }}" method="POST">
         @csrf
         <table class="table table-hover">
@@ -23,8 +23,11 @@
                 <th><label for="structure"  class="form-label"> structure :</label></th>
                 <td><input type="text" name="structure" class="form-control" required></td>
             </tr>
+            <tr>
+                <th>action</th>
+                <button type="submit" class="btn btn-block">Créer</button>
+            </tr>
         </table>
-        <button type="submit" class="btn btn-primary">Créer</button>
     </form>
 </div>
 
