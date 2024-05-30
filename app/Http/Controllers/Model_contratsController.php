@@ -33,7 +33,7 @@ class Model_contratsController extends Controller
         ]);
 
         Modelcontrat::create($data);
-        return redirect()->route('.model_contrats.index');
+        return redirect()->route('model_contrats.index');
     }
 
     public function edit($id)

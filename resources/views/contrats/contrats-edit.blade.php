@@ -39,7 +39,15 @@
 
             <tr>
                 <th><label for="structure" class="form-label">Structure:</label></th>
-                <td><input type="text" id="structure" name="structure" class="form-control" value="{{ $contrat->structure }}" required></td>
+                <td>
+                    <select id="structure" name="structure" class="form-control" required>
+                        @foreach($modelContrats as $model_contrat)
+                            <option value="{{ $model_contrat->id }}" {{ $contrat->model_contrat == $model_contrat->id ? 'selected' : '' }}>
+                                {{ $model_contrat->name }}
+                            </option>
+                        @endforeach
+                    </select>
+                </td>
             </tr>
 
             <tr>
