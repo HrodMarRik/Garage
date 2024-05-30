@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\model_contrat;
+use App\Models\Modelcontrat;
 use Illuminate\Http\Request;
 
 class Model_contratsController extends Controller
 {
     public function index()
     {
-        $contrats = model_contrat::all();
+        $contrats = Modelcontrat::all();
         return view('model_contrat.model_contrats-index', compact('contrats'));
     }
 
     public function show($id)
     {
-        $contrat = model_contrat::findOrFail($id);
+        $contrat = Modelcontrat::findOrFail($id);
         return view('model_contrat.model_contrats-show', compact('contrat'));
     }
 
@@ -31,13 +31,13 @@ class Model_contratsController extends Controller
             'structure' => 'required|string',
         ]);
 
-        model_contrat::create($data);
+        Modelcontrat::create($data);
         return redirect()->route('model_contrat.model_contrats-index');
     }
 
     public function edit($id)
     {
-        $contrat = model_contrat::findOrFail($id);
+        $contrat = Modelcontrat::findOrFail($id);
         return view('model_contrat.model_contrats-edit', compact('contrat'));
     }
 
@@ -48,14 +48,14 @@ class Model_contratsController extends Controller
             'structure' => 'required|string',
         ]);
 
-        $contrat = model_contrat::findOrFail($id);
+        $contrat = Modelcontrat::findOrFail($id);
         $contrat->update($data);
         return redirect()->route('model_contrat.model_contrats-index');
     }
 
     public function destroy($id)
     {
-        $contrat = model_contrat::findOrFail($id);
+        $contrat = Modelcontrat::findOrFail($id);
         $contrat->delete();
         return redirect()->route('model_contrat.model_contrats-index');
     }

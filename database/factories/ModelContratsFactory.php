@@ -2,12 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\model_contrat;
+use App\Models\Modelcontrat;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ModelContratsFactory extends Factory
 {
-    protected $model = model_contrats::class;
+    protected $model = Modelcontrat::class;
 
     public function definition()
     {
