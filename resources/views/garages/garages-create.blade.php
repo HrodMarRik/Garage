@@ -1,47 +1,56 @@
 @include('partiels.header')
 
 <div class="container">
-    <h2>Créer un nouveau client</h2>
+    <h2>Modifier le garage</h2>
 </div>
 <div class="container">
-    <form action="{{ route('garages.store') }}" method="POST">
+    <form action="{{ route('garages.update') }}" method="POST">
         @csrf
+        @method('PUT')
         <table class="table table-hover">
+
             <tr>
-                <th><label for="name" class="form-label">Nom:</label></th>
-                <td><input type="text" id="name" name="name" class="form-control" required></td>
+                <th><label for="adresse" class="form-label">Adresse</label></th>
+                <td><input type="text" name="adresse" id="adresse" class="form-control" required></td>
             </tr>
 
             <tr>
-                <th><label for="statut" class="form-label">Statut:</label></th>
-                <td><select id="statut" name="statut" class="form-control" required>
-                        <option value="entreprise">Entreprise</option>
-                        <option value="particulier">Particulier</option>
-                    </select>
-                </td>
+                <th><label for="montant_charges" class="form-label">Montant des Charges</label></th>
+                <td><input type="number" name="montant_charges" id="montant_charges" class="form-control" required></td>
             </tr>
 
             <tr>
-                <th><label for="telephone" class="form-label">Téléphone:</label></th>
-                <td><input type="text" id="telephone" name="telephone" class="form-control" required></td>
+                <th><label for="prix_particulier" class="form-label">Prix Particulier</label></th>
+                <td><input type="number" name="prix_particulier" id="prix_particulier" class="form-control" required></td>
             </tr>
 
             <tr>
-                <th><label for="email" class="form-label">Email:</label></th>
-                <td><input type="email" id="email" name="email" class="form-control" required></td>
+                <th><label for="prix_entreprise" class="form-label">Prix Entreprise</label></th>
+                <td><input type="number" name="prix_entreprise" id="prix_entreprise" class="form-control" required></td>
             </tr>
 
             <tr>
-                <th><label for="info" class="form-label">Info:</label></th>
-                <td><textarea id="info" name="info" class="form-control" rows="3" required></textarea></td>
+                <th><label for="remboursement_emprunt_mois" class="form-label">Remboursement Emprunt par Mois</label></th>
+                <td><input type="number" name="remboursement_emprunt_mois" id="remboursement_emprunt_mois" class="form-control"required></td>
+            </tr>
+
+            <tr>
+                <th><label for="date_achat" class="form-label">Date d'Achat</label></th>
+                <td><input type="date" name="date_achat" id="date_achat" class="form-control"}}" required></td>
+            </tr>
+
+            <tr>
+                <th><label for="date_fin_remboursement_emprunt" class="form-label">Date de Fin de Remboursement de l'Emprunt</label></th>
+                <td><input type="date" name="date_fin_remboursement_emprunt" id="date_fin_remboursement_emprunt" class="form-control"mboursement_emprunt }}" required></td>
             </tr>
             <tr>
-                <th>Action:</th>
-                <td><button class="btn btn-block" type="submit">Créer</button></td>
+                <th>Action</th>
+                <td><button type="submit" class="btn btn-block">Enregistrer les modifications</button></td>
             </tr>
         </table>
-        <a class="btn btn-block" href="{{ route('garages.index') }}">Retour à la liste</a>
     </form>
+
+    <a class="btn btn-block" href="{{ route('garages.index') }}">Retour à la liste</a>
 </div>
 
 @include('partiels.footer')
