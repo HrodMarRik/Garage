@@ -2,7 +2,7 @@
 
 <div class="container"><h2>Liste des contrats</h2></div>
 <div class="container">
-    <a href="{{ route('contrats.create') }}" class="btn btn-block">Créer un nouveau contrat</a>
+    <a href="{{ route('contrats.create') }}" class="btn btn-block">Créer un nouveau model de contrat</a>
 
     <table class="table table-hover">
         <thead>
