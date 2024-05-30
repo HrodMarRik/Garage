@@ -4,7 +4,7 @@
     <h2>Modifier le garage</h2>
 </div>
 <div class="container">
-    <form action="{{ route('garages.update') }}" method="POST">
+    <form action="{{ route('garages.store') }}" method="POST">
         @csrf
         @method('PUT')
         <table class="table table-hover">
