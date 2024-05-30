@@ -33,7 +33,7 @@ class Model_contratsController extends Controller
         ]);
 
         Modelcontrat::create($data);
-        return redirect()->route('model_contrat.model_contrats-index');
+        return redirect()->route('.model_contrats.index');
     }
 
     public function edit($id)
@@ -52,13 +52,13 @@ class Model_contratsController extends Controller
 
         $contrat = Modelcontrat::findOrFail($id);
         $contrat->update($data);
-        return redirect()->route('model_contrat.model_contrats-index');
+        return redirect()->route('model_contrats.index');
     }
 
     public function destroy($id)
     {
         $contrat = Modelcontrat::findOrFail($id);
         $contrat->delete();
-        return redirect()->route('model_contrat.model_contrats-index');
+        return redirect()->route('model_contrats.index');
     }
 }
