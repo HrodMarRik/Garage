@@ -48,7 +48,8 @@ class ContratsController extends Controller
         $contrat = Contrat::findOrFail($id);
         $clients = Client::all();
         $garages = Garage::all();
-        return view('contrats.contrats-edit', compact('contrat', 'clients', 'garages'));
+        $modelContrats = Modelcontrat::all();
+        return view('contrats.contrats-edit', compact('contrat', 'clients', 'garages', 'modelContrats'));
     }
 
     public function update(Request $request, $id)

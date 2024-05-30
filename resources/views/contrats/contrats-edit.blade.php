@@ -42,7 +42,7 @@
                 <td>
                     <select id="structure" name="structure" class="form-control" required>
                         @foreach($modelContrats as $model_contrat)
-                            <option value="{{ $model_contrat->id }}" {{ $contrat->model_contrat == $model_contrat->id ? 'selected' : '' }}>
+                            <option value="{{ $model_contrat->structure }}" {{ $contrat->structure == $model_contrat->structure ? 'selected' : '' }}>
                                 {{ $model_contrat->name }}
                             </option>
                         @endforeach
