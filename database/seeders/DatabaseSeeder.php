@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
             ClientSeeder::class,
             GarageSeeder::class,
             ContratSeeder::class,
+            ModelContratsSeeder::class,
         ]);
     }
 }
