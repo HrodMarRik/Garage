@@ -25,12 +25,12 @@
                     @endforeach
                     <td>
                         <div>
-                            <a class="btn" href="{{ route('clients.show', $client->id) }}">Afficher</a>
-                            <a class="btn" href="{{ route('clients.edit', $client->id) }}">Modifier</a>
+                            <a class="btn btn-block" href="{{ route('clients.show', $client->id) }}">Afficher</a>
+                            <a class="btn btn-block" href="{{ route('clients.edit', $client->id) }}">Modifier</a>
                             <form action="{{ route('clients.destroy', $client->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Supprimer</button>
+                                <button type="submit" class="btn btn-block btn-danger">Supprimer</button>
                             </form>
                         </div>
                     </td>

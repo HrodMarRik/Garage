@@ -36,9 +36,14 @@
             </tr>
 
             <tr>
-                <th><label for="status" class="form-label">Statut:</label></th>
+                <th><label for="status" class="form-label">status:</label></th>
                 <td>
-                    <input type="text" id="status" name="status" class="form-control" required>
+                    <select id="status" name="status" class="form-control" required>
+                        <option>inactive</option>
+                        <option>active</option>
+                        <option>pause</option>
+                        <option>delete</option>
+                    </select>
                     @error('status')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror

@@ -40,7 +40,7 @@
             </tr>
         </table>
     </form>
-    <a class="btn" href="{{ route('contrats.index') }}">Retour à la liste</a>
+    <a class="btn btn-block" href="{{ route('contrats.index') }}">Retour à la liste</a>
 </div>
 
 @include('partiels.footer')

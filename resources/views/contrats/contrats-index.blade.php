@@ -1,6 +1,8 @@
 @include('partiels.header')
 <div class="container">
-    <a href="{{ route('contrats.create') }}" class="btn btn-block">Créer un nouveau contrat</a>
+    <a href="{{ route('contrats.create') }}" class="btn btn-block">
+        <h2>Créer un nouveau contrat</h2>
+    </a>
     <table class="table table-hover">
         <thead>
             <tr>
@@ -22,12 +24,12 @@
                     <td>{{ $contrat->structure }}</td>
                     <td>
                         <div>
-                            <a class="btn" href="{{ route('contrats.show', $contrat->id) }}">Afficher</a>
-                            <a class="btn" href="{{ route('contrats.edit', $contrat->id) }}">Modifier</a>
+                            <a class="btn btn-block" href="{{ route('contrats.show', $contrat->id) }}">Afficher</a>
+                            <a class="btn btn-block" href="{{ route('contrats.edit', $contrat->id) }}">Modifier</a>
                             <form action="{{ route('contrats.destroy', $contrat->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Supprimer</button>
+                                <button type="submit" class="btn btn-block btn-danger">Supprimer</button>
                             </form>
                         </div>
                     </td>

@@ -27,12 +27,12 @@
                     @endforeach
                     <td>
                         <div>
-                            <a class="btn" href="{{ route('garages.show', $garage->id) }}">Afficher</a>
-                            <a class="btn" href="{{ route('garages.edit', $garage->id) }}">Modifier</a>
+                            <a class="btn btn-block" href="{{ route('garages.show', $garage->id) }}">Afficher</a>
+                            <a class="btn btn-block" href="{{ route('garages.edit', $garage->id) }}">Modifier</a>
                             <form action="{{ route('garages.destroy', $garage->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Supprimer</button>
+                                <button type="submit" class="btn btn-block btn-danger">Supprimer</button>
                             </form>
                         </div>
                     </td>
