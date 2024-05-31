@@ -12,7 +12,7 @@
                 <td>
                     <select id="id_client" name="id_client" class="form-control" required>
                         @foreach($clients as $client)
-                            <option>{{ $client->name }}</option>
+                            <option value="{{ $client->id }}">{{ $client->name }}</option>
                         @endforeach
                     </select>
                     @error('id_client')
@@ -26,7 +26,7 @@
                 <td>
                     <select id="id_garage" name="id_garage" class="form-control" required>
                         @foreach($garages as $garage)
-                            <option>{{ $garage->adresse }}</option>
+                            <option value="{{ $garage->id }}">{{ $garage->adresse }}</option>
                         @endforeach
                     </select>
                     @error('id_garage')

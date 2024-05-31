@@ -33,8 +33,8 @@ class ContratsController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'id_client' => 'required|string',
-            'id_garage' => 'required|string',
+            'id_client' => 'required|integer|exists:clients,id',
+            'id_garage' => 'required|integer|exists:garages,id',
             'status' => 'required|string',
             'structure' => 'required|string',
         ]);

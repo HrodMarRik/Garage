@@ -9,17 +9,17 @@
         <table class="table table-hover">
 
             <tr>
-                <th><label for="nom">Nom</label></th>
+                <th><label for="name">name</label></th>
                 <td>
-                    <input type="text" name="nom" id="nom" class="form-control" required>
-                    @error('nom')
+                    <input type="text" name="name" id="name" class="form-control" required>
+                    @error('name')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </td>
             </tr>
 
             <tr>
-                <th><label for="statut">Statut</label></th>
+                <th><label for="statut">statut</label></th>
                 <td>
                     <select name="statut" id="statut" class="form-control" required>
                         <option>Entreprise</option>
@@ -32,20 +32,20 @@
             </tr>
 
             <tr>
-                <th><label for="telephone">Téléphone</label></th>
+                <th><label for="phone_number">Téléphone</label></th>
                 <td>
-                    <input type="text" name="telephone" id="telephone" class="form-control" required>
-                    @error('telephone')
+                    <input type="text" name="phone_number" id="phone_number" class="form-control" required>
+                    @error('phone_number')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </td>
             </tr>
 
             <tr>
-                <th><label for="email">Email</label></th>
+                <th><label for="mail">mail</label></th>
                 <td>
-                    <input type="email" name="email" id="email" class="form-control" required>
-                    @error('email')
+                    <input type="mail" name="mail" id="mail" class="form-control" required>
+                    @error('mail')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </td>
@@ -54,7 +54,7 @@
             <tr>
                 <th><label for="info">Informations</label></th>
                 <td>
-                    <textarea rows="5" name="info" id="info" class="form-control" required>{{ $client->info }}</textarea>
+                    <textarea rows="5" name="info" id="info" class="form-control" required></textarea>
                     @error('info')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
@@ -62,7 +62,7 @@
             </tr>
             <tr>
                 <th>Action</th>
-                <td><button type="submit" class="btn btn-block">Enregistrer les modifications</button></td>
+                <td><button type="submit" class="btn btn-block">Créer le client</button></td>
             </tr>
         </table>
         <a class="btn btn-block" href="{{ route('clients.index') }}">Retour à la liste</a>

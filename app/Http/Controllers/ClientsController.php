@@ -28,14 +28,14 @@ class ClientsController extends Controller
     {
         $data = $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:clients,email',
-            'phone' => 'nullable|string|max:20',
-            'address' => 'nullable|string',
-            'status' => 'required|in:entreprise,particulier',
+            'statut' => 'required|in:Entreprise,Particulier',
+            'phone_number' => 'nullable|string|max:20',
+            'mail' => 'required|unique:clients,mail',
+            'info' => 'nullable|string',
         ]);
 
         Client::create($data);
-        return redirect()->route('clients-index');
+        return redirect()->route('clients.index');
     }
 
     public function edit($id)
@@ -48,10 +48,10 @@ class ClientsController extends Controller
     {
         $data = $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:clients,email,' . $id,
-            'phone' => 'nullable|string|max:20',
-            'address' => 'nullable|string',
-            'status' => 'required|in:entreprise,particulier',
+            'statut' => 'required|in:entreprise,particulier',
+            'phone_number' => 'nullable|string|max:20',
+            'mail' => 'required|unique:clients,mail,' . $id,
+            'info' => 'nullable|string',
         ]);
 
         $client = Client::findOrFail($id);

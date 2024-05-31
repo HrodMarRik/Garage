@@ -28,7 +28,7 @@ class GaragesController extends Controller
     {
         $data = $request->validate([
             'adresse' => 'required|string|max:255',
-            'charges' => 'required|numeric',
+            'montant_charges' => 'required|numeric',
             'prix_particulier' => 'required|numeric',
             'prix_entreprise' => 'required|numeric',
             'remboursement_emprunt_mois' => 'nullable|numeric',

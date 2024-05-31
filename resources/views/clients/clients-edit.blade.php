@@ -10,10 +10,10 @@
         <table class="table table-hover">
 
             <tr>
-                <th><label for="nom">Nom</label></th>
+                <th><label for="name">name</label></th>
                 <td>
-                    <input type="text" name="nom" id="nom" class="form-control" value="{{ $client->name }}" required>
-                    @error('nom')
+                    <input type="text" name="name" id="name" class="form-control" value="{{ $client->name }}" required>
+                    @error('name')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </td>
@@ -33,20 +33,20 @@
             </tr>
 
             <tr>
-                <th><label for="telephone">Téléphone</label></th>
+                <th><label for="phone_number">Téléphone</label></th>
                 <td>
-                    <input type="text" name="telephone" id="telephone" class="form-control" value="{{ $client->phone_number }}" required>
-                    @error('telephone')
+                    <input type="text" name="phone_number" id="phone_number" class="form-control" value="{{ $client->phone_number }}" required>
+                    @error('phone_number')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </td>
             </tr>
 
             <tr>
-                <th><label for="email">Email</label></th>
+                <th><label for="mail">mail</label></th>
                 <td>
-                    <input type="email" name="email" id="email" class="form-control" value="{{ $client->mail }}" required>
-                    @error('email')
+                    <input type="mail" name="mail" id="mail" class="form-control" value="{{ $client->mail }}" required>
+                    @error('mail')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </td>

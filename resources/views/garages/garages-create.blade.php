@@ -1,12 +1,11 @@
 @include('partiels.header')
 
 <div class="container">
-    <h2>Modifier le garage</h2>
+    <h2>Créer le garage</h2>
 </div>
 <div class="container">
     <form action="{{ route('garages.store')}}" method="POST">
         @csrf
-        @method('PUT')
         <table class="table table-hover">
             <tr>
                 <th><label for="adresse" class="form-label">Adresse</label></th>
@@ -72,7 +71,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2"><button type="submit" class="btn btn-block btn-primary">Enregistrer les modifications</button></td>
+                <td colspan="2"><button type="submit" class="btn btn-block btn-primary">Créer le garage</button></td>
             </tr>
         </table>
     </form>
