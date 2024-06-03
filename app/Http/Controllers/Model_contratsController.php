@@ -29,7 +29,7 @@ class Model_contratsController extends Controller
         $data = $request->validate([
             'name' => 'required|string',
             'status' => 'required|string',
-            'structure' => 'required|string',
+            'structure' => 'required|json',
         ]);
 
         Modelcontrat::create($data);
@@ -47,7 +47,7 @@ class Model_contratsController extends Controller
         $data = $request->validate([
             'name' => 'required|string',
             'status' => 'required|string',
-            'structure' => 'required|string',
+            'structure' => 'required|json',
         ]);
 
         $contrat = Modelcontrat::findOrFail($id);

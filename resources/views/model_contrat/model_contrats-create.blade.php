@@ -1,6 +1,6 @@
 @include('partiels.header')
 <div class="container">
-    <h2>Modifier le modèle de contrat</h2>
+    <h2>Créer le modèle de contrat</h2>
 </div>
 <div class="container">
     <form action="{{ route('model_contrats.store') }}" method="POST">
@@ -27,9 +27,7 @@
             <tr>
                 <th><label for="structure" class="form-label">Structure:</label></th>
                 <td>
-                    <select id="id_garage" name="id_garage" class="form-control" required>
-                        <option></option>
-                    </select>
+                    <div id="editorjs"></div>
                     @error('structure')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
@@ -37,11 +35,11 @@
             </tr>
             <tr>
                 <th>Action:</th>
-                <td><button type="submit" class="btn btn-block">Enregistrer les modifications</button></td>
+                <td><button type="submit" id="save-button" class="btn btn-block">Enregistrer les modifications</button></td>
             </tr>
         </table>
     </form>
     <a class="btn" href="{{ route('contrats.index') }}">Retour à la liste</a>
 </div>
-
+<script type="text/javascript" src="{{ asset('js/modelcontrat.js') }}"></script>
 @include('partiels.footer')
