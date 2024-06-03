@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId('id_client')->constrained('clients');
-            $table->foreignId('id_garage')->constrained('garages');
+            $table->foreignId('id_garage')->nullable()->constrained('garages')->onDelete('set null');
             $table->string('status');
             $table->text('structure');
         });

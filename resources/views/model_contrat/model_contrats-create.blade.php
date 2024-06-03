@@ -3,9 +3,8 @@
     <h2>Modifier le modèle de contrat</h2>
 </div>
 <div class="container">
-    <form action="{{ route('model_contrats.update', $contrat->id) }}" method="POST">
+    <form action="{{ route('model_contrats.store') }}" method="POST">
         @csrf
-        @method('PUT')
         <table class="table table-hover">
             <tr>
                 <th><label for="name" class="form-label">Nom:</label></th>
@@ -28,7 +27,9 @@
             <tr>
                 <th><label for="structure" class="form-label">Structure:</label></th>
                 <td>
-                    <input type="text" id="structure" name="structure" class="form-control" required>
+                    <select id="id_garage" name="id_garage" class="form-control" required>
+                        <option></option>
+                    </select>
                     @error('structure')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror

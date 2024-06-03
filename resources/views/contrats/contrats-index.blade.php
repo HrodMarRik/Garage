@@ -19,7 +19,7 @@
                 <tr>
                     <td>{{ $contrat->id }}</td>
                     <td>{{ $contrat->client->name }}</td>
-                    <td>{{ $contrat->garage->adresse }}</td>
+                    <td>{{ $contrat->garage ? $contrat->garage->adresse : 'Supprimé' }}</td>
                     <td>{{ $contrat->status }}</td>
                     <td>{{ $contrat->structure }}</td>
                     <td>
