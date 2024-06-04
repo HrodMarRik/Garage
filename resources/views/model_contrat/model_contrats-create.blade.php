@@ -27,7 +27,9 @@
             <tr>
                 <th><label for="structure" class="form-label">Structure:</label></th>
                 <td>
-                    <div id="editorjs"></div>
+                    <div class="form-label">
+                        <div id="editorjs"></div>
+                    </div>
 
                 </td>
             </tr>

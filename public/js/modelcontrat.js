@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", function() {
         class: Header,
         inlineToolbar: true,
       },
+      list: {
+        class: List,
+        inlineToolbar: true
+      }
       // Other tools can be added here
     }
   });
