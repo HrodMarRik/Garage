@@ -28,14 +28,12 @@
                 <th><label for="structure" class="form-label">Structure:</label></th>
                 <td>
                     <div id="editorjs"></div>
-                    @error('structure')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
+
                 </td>
             </tr>
             <tr>
                 <th>Action:</th>
-                <td><button type="submit" id="save-button" class="btn btn-block">Enregistrer les modifications</button></td>
+                <td><button type="submit" class="btn btn-block">Enregistrer les modifications</button></td>
             </tr>
         </table>
     </form>
