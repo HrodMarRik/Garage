@@ -27,7 +27,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
+ 
 // Groupement des routes nécessitant une authentification
 Route::middleware('auth')->group(function () {
     // Routes pour le profil utilisateur
